@@ -1,8 +1,13 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/authentication/loginpage.dart';
+import 'package:food_delivery_app/provider/themprovider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context) => Themeprovider(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: Provider.of<Themeprovider>(context).themData,
       home: LoginPage(),
     );
   }
