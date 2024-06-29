@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/widget/mybutton.dart';
 import 'package:food_delivery_app/widget/textfield.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -32,11 +31,9 @@ class _LoginPageState extends State<LoginPage> {
               height: 25,
             ),
             Text("Food Delivery App",
-                style: GoogleFonts.lato(
-                  textStyle: TextStyle(
-                    fontSize: 20,
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                  ),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.inversePrimary,
                 )),
             SizedBox(
               height: 25,
@@ -58,6 +55,25 @@ class _LoginPageState extends State<LoginPage> {
 
             //Sign_In button
             myButton(ontap: () {}, buttonname: "Sign-in"),
+
+            //Register,
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Not a Member?",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    )),
+                Text("Register Now",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    )),
+              ],
+            )
           ],
         ),
       ),
