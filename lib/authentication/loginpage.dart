@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/widget/mybutton.dart';
+import 'package:food_delivery_app/widget/textfield.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -8,6 +10,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +37,26 @@ class _LoginPageState extends State<LoginPage> {
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
+            SizedBox(
+              height: 25,
+            ),
+
+            //Email field
+            myCreatTextField(
+                controller: emailcontroller, hinttext: "Email", istrue: false),
+            SizedBox(
+              height: 10,
+            ),
+            myCreatTextField(
+                controller: passwordcontroller,
+                hinttext: "Password",
+                istrue: true),
+            SizedBox(
+              height: 10,
+            ),
+
+            //Sign_In button
+            myButton(ontap: () {}, buttonname: "Sign-in"),
           ],
         ),
       ),
