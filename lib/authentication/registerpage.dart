@@ -3,7 +3,8 @@ import 'package:food_delivery_app/widget/mybutton.dart';
 import 'package:food_delivery_app/widget/textfield.dart';
 
 class RegisterPage extends StatelessWidget {
-  RegisterPage({super.key});
+  final void Function()? ontap;
+  RegisterPage({required this.ontap});
   final TextEditingController emailcontroller = TextEditingController();
   final TextEditingController passwordcontroller = TextEditingController();
   final TextEditingController confirmpasswordcontroller =
@@ -59,24 +60,30 @@ class RegisterPage extends StatelessWidget {
             ),
 
             //Sign_In button
-            myButton(ontap: () {}, buttonname: "Sign-in"),
+            myButton(ontap: () {}, buttonname: "Sign-up"),
 
             //Register,
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Not a Member?",
+                Text("Already have account?",
                     style: TextStyle(
                       fontSize: 16,
                       color: Theme.of(context).colorScheme.inversePrimary,
                     )),
-                Text("Register Now",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    )),
+                SizedBox(
+                  width: 5,
+                ),
+                GestureDetector(
+                  onTap: ontap,
+                  child: Text("LoginNow",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                      )),
+                ),
               ],
             )
           ],

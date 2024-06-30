@@ -67,6 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                       fontSize: 16,
                       color: Theme.of(context).colorScheme.inversePrimary,
                     )),
+                SizedBox(
+                  width: 5,
+                ),
                 GestureDetector(
                   onTap: widget.ontap,
                   child: Text("Register Now",
