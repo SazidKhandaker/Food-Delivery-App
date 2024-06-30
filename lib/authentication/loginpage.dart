@@ -3,7 +3,8 @@ import 'package:food_delivery_app/widget/mybutton.dart';
 import 'package:food_delivery_app/widget/textfield.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  final void Function() ontap;
+  const LoginPage({required this.ontap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -66,12 +67,15 @@ class _LoginPageState extends State<LoginPage> {
                       fontSize: 16,
                       color: Theme.of(context).colorScheme.inversePrimary,
                     )),
-                Text("Register Now",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                    )),
+                GestureDetector(
+                  onTap: widget.ontap,
+                  child: Text("Register Now",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                      )),
+                ),
               ],
             )
           ],
