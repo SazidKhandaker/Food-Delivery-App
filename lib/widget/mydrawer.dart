@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/drawerwidget/settingpage.dart';
 import 'package:food_delivery_app/widget/drawerlist.dart';
 
 class MyDrawer extends StatefulWidget {
@@ -40,10 +41,13 @@ class _MyDrawerState extends State<MyDrawer> {
               text: "S E T T I N G",
               oncall: () {
                 Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingPage()),
+                );
               }),
           Spacer(),
-          ListOfDrawer(
-              icon: Icons.h_mobiledata, text: "L O G O U T", oncall: () {}),
+          ListOfDrawer(icon: Icons.logout, text: "L O G O U T", oncall: () {}),
           SizedBox(
             height: 25,
           )
