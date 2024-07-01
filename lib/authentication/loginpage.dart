@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/homepage.dart';
 import 'package:food_delivery_app/widget/mybutton.dart';
 import 'package:food_delivery_app/widget/textfield.dart';
 
@@ -13,6 +14,13 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
+  void loginsuccessfull() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => HomePage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             //Sign_In button
-            myButton(ontap: () {}, buttonname: "Sign-in"),
+            myButton(ontap: loginsuccessfull, buttonname: "Sign-in"),
 
             //Register,
 
