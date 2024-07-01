@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/widget/mydrawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,12 +12,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.background,
         title: Text(
-          "Welcome",
+          "HomePage",
           style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 18,
