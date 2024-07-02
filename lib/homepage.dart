@@ -15,21 +15,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).colorScheme.background,
-      //   title: Text(
-      //     "Home",
-      //     style: TextStyle(
-      //         fontWeight: FontWeight.bold,
-      //         fontSize: 18,
-      //         color: Theme.of(context).colorScheme.tertiary),
-      //   ),
-      //   centerTitle: true,
-      // ),
       body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
                 MySliverAppBar(
-                  child: Text("T1"),
+                  child: Column(
+                    children: [],
+                  ),
                   title: Text("T2"),
                 )
               ],
