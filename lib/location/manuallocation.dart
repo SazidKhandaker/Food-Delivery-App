@@ -5,23 +5,44 @@ class Mycurrentlocation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Padding(
-      padding: const EdgeInsets.all(25.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Delivery Now",
-            style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.secondary),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 25,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Delivery Now",
+          style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.secondary),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 10, bottom: 25),
+          child: GestureDetector(
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text("Your Location"),
+                  content: TextField(
+                    decoration: InputDecoration(hintText: "Search Address..."),
+                  ),
+                  actions: [
+                    MaterialButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text("Cancle"),
+                    ),
+                    MaterialButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text("Save"),
+                    ),
+                  ],
+                ),
+              );
+            },
             child: Row(
               children: [
                 Text(
@@ -38,8 +59,8 @@ class Mycurrentlocation extends StatelessWidget {
               ],
             ),
           ),
-        ],
-      ),
-    ));
+        ),
+      ],
+    );
   }
 }
