@@ -6,7 +6,7 @@ class MyDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(bottom: 50),
       child: Container(
         padding: EdgeInsets.only(left: 25, right: 25),
         decoration: BoxDecoration(
