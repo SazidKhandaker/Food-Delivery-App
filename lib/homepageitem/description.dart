@@ -10,7 +10,8 @@ class MyDescription extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(left: 25, right: 25),
         decoration: BoxDecoration(
-          border: Border.all(color: Theme.of(context).colorScheme.secondary),
+          border:
+              Border.all(color: Theme.of(context).colorScheme.inversePrimary),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Padding(
@@ -31,7 +32,7 @@ class MyDescription extends StatelessWidget {
                     "Delivery Fee",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.secondary),
+                        color: Theme.of(context).colorScheme.inversePrimary),
                   ),
                 ],
               ),
@@ -48,7 +49,7 @@ class MyDescription extends StatelessWidget {
                     "Delivery Fee",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.secondary),
+                        color: Theme.of(context).colorScheme.inversePrimary),
                   ),
                 ],
               ),

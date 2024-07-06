@@ -62,8 +62,22 @@ class _HomePageState extends State<HomePage>
                   title: MyTabBar(tabBarcontorller: tabController),
                 ),
               ],
-          body: Container(
-            color: Colors.red,
+          body: TabBarView(
+            controller: tabController,
+            children: [
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Text("1");
+                },
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Text("2");
+                },
+              )
+            ],
           )),
     );
   }
