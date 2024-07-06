@@ -13,7 +13,7 @@ class Mycurrentlocation extends StatelessWidget {
           style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Theme.of(context).colorScheme.secondary),
+              color: Theme.of(context).colorScheme.inversePrimary),
         ),
         Padding(
           padding: EdgeInsets.only(top: 10, bottom: 25),
@@ -50,7 +50,7 @@ class Mycurrentlocation extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.secondary),
+                      color: Theme.of(context).colorScheme.inversePrimary),
                 ),
                 SizedBox(
                   width: 3,
