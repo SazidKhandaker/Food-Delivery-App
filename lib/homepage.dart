@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/homepageitem/description.dart';
 import 'package:food_delivery_app/location/manuallocation.dart';
 import 'package:food_delivery_app/widget/mydrawer.dart';
 import 'package:food_delivery_app/widget/sliverappbar.dart';
@@ -31,8 +32,11 @@ class _HomePageState extends State<HomePage> {
                               color: Theme.of(context).colorScheme.secondary,
                             )),
                         Mycurrentlocation(),
+                        //food bistarito
+
+                        MyDescription(),
                       ]),
-                  title: Text("T2"),
+                  title: Text(""),
                 ),
               ],
           body: Container(
