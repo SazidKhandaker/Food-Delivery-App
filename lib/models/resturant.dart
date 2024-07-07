@@ -80,7 +80,7 @@ class Resturant {
     Food(
         name: "Egg salad",
         description: "prepared with tomato egg  and salad,",
-        imagepath: "lib/salad/burgers/eggsalad.png",
+        imagepath: "lib/images/salad/eggsalad.png",
         price: 130,
         category: Foodcategory.salad,
         availableAddOne: [
@@ -90,25 +90,75 @@ class Resturant {
         name: "Fruite Salad",
         description:
             "prepared with tomato mixed with different fruites  and salad,",
-        imagepath: "lib/salad/burgers/fruitesalad.png",
+        imagepath: "lib/images/salad/fruitesalad.png",
         price: 270,
         category: Foodcategory.salad,
         availableAddOne: [Addone(name: "Large", price: 310)]),
     Food(
         name: "Healthy Salad",
         description: "prepared with tomato egg  and salad,",
-        imagepath: "lib/salad/burgers/healthysalad.png",
+        imagepath: "lib/images/salad/healthysalad.png",
         price: 220,
         category: Foodcategory.salad,
         availableAddOne: [Addone(name: "Large", price: 280)]),
     Food(
         name: "Mixed Cheese Salad",
         description: "Prepared with chicken , cheese and salad",
-        imagepath: "lib/salad/burgers/mixedcheesesalad.png",
+        imagepath: "lib/images/salad/mixedcheesesalad.png",
         price: 330,
         category: Foodcategory.salad,
         availableAddOne: [Addone(name: "Large", price: 390)]),
 
     //Drinks
+    Food(
+        name: "Dite Coke",
+        description: "0 fat and low suger",
+        imagepath: "lib/images/drinks/coke.png",
+        price: 70,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Medium", price: 90),
+          Addone(name: "Large", price: 110),
+        ]),
+    Food(
+        name: "Dite Coke",
+        description: "0 fat and low suger",
+        imagepath: "lib/images/drinks/coke.png",
+        price: 70,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Medium", price: 90),
+          Addone(name: "Large", price: 110),
+        ]),
+    Food(
+        name: "Dite Coke",
+        description: "0 fat and low suger",
+        imagepath: "lib/images/drinks/coke.png",
+        price: 70,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Medium", price: 90),
+          Addone(name: "Large", price: 110),
+        ]),
+    Food(
+        name: "Dite Coke",
+        description: "0 fat and low suger",
+        imagepath: "lib/images/drinks/coke.png",
+        price: 70,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Medium", price: 90),
+          Addone(name: "Large", price: 110),
+        ]),
+    Food(
+        name: "Dite Coke",
+        description: "0 fat and low suger",
+        imagepath: "lib/images/drinks/coke.png",
+        price: 70,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Medium", price: 90),
+          Addone(name: "Large", price: 110),
+        ]),
   ];
 }
