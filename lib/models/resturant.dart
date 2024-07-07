@@ -66,5 +66,49 @@ class Resturant {
         ]),
 
     //Salads
+
+    Food(
+        name: "chase nut salad",
+        description: "prepared with chiken nuts and sadlad,",
+        imagepath: "lib/images/salad/chawsnetsalad.png",
+        price: 280,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Large", price: 340),
+        ]),
+
+    Food(
+        name: "Egg salad",
+        description: "prepared with tomato egg  and salad,",
+        imagepath: "lib/salad/burgers/eggsalad.png",
+        price: 130,
+        category: Foodcategory.salad,
+        availableAddOne: [
+          Addone(name: "Large", price: 160),
+        ]),
+    Food(
+        name: "Fruite Salad",
+        description:
+            "prepared with tomato mixed with different fruites  and salad,",
+        imagepath: "lib/salad/burgers/fruitesalad.png",
+        price: 270,
+        category: Foodcategory.salad,
+        availableAddOne: [Addone(name: "Large", price: 310)]),
+    Food(
+        name: "Healthy Salad",
+        description: "prepared with tomato egg  and salad,",
+        imagepath: "lib/salad/burgers/healthysalad.png",
+        price: 220,
+        category: Foodcategory.salad,
+        availableAddOne: [Addone(name: "Large", price: 280)]),
+    Food(
+        name: "Mixed Cheese Salad",
+        description: "Prepared with chicken , cheese and salad",
+        imagepath: "lib/salad/burgers/mixedcheesesalad.png",
+        price: 330,
+        category: Foodcategory.salad,
+        availableAddOne: [Addone(name: "Large", price: 390)]),
+
+    //Drinks
   ];
 }
