@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/homepageitem/description.dart';
 import 'package:food_delivery_app/location/manuallocation.dart';
+import 'package:food_delivery_app/models/food.dart';
 import 'package:food_delivery_app/widget/mydrawer.dart';
 import 'package:food_delivery_app/widget/sliverappbar.dart';
 import 'package:food_delivery_app/widget/tabbar.dart';
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     tabController = TabController(
-      length: 2,
+      length: Foodcategory.values.length,
       vsync: this,
     );
 
@@ -76,7 +77,25 @@ class _HomePageState extends State<HomePage>
                 itemBuilder: (context, index) {
                   return Text("2");
                 },
-              )
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Text("3");
+                },
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Text("4");
+                },
+              ),
+              ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Text("5");
+                },
+              ),
             ],
           )),
     );
