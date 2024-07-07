@@ -3,12 +3,18 @@ import 'package:food_delivery_app/authentication/loginpage.dart';
 import 'package:food_delivery_app/authentication/registerorlogin.dart';
 import 'package:food_delivery_app/authentication/registerpage.dart';
 import 'package:food_delivery_app/homepage.dart';
+import 'package:food_delivery_app/models/resturant.dart';
 import 'package:food_delivery_app/provider/themprovider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => Themeprovider(), child: const MyApp()));
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MultiProvider(providers: [
+    //Theme
+    ChangeNotifierProvider(create: (context) => Themeprovider()),
+    //resturant
+    ChangeNotifierProvider(create: (context) => Resturant())
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Provider.of<Themeprovider>(context).themData,
-      home: HomePage(),
+      home: RegisterOrLogin(),
     );
   }
 }
