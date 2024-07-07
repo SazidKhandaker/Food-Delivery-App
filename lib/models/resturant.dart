@@ -162,5 +162,56 @@ class Resturant {
           Addone(name: "Large", price: 470),
         ]),
     //DESSERT
+
+    Food(
+        name: "Heart Ocane",
+        description: "Coclate, Icecram mixed with ice and cream",
+        imagepath: "lib/images/dessert/Hearthocean.png",
+        price: 450,
+        category: Foodcategory.dessert,
+        availableAddOne: [
+          Addone(name: "Medium", price: 480),
+          Addone(name: "Large", price: 500),
+        ]),
+    Food(
+        name: "Lava Ocane",
+        description: "Coclate, Icecram mixed with ice and cream",
+        imagepath: "lib/images/dessert/Lava.png",
+        price: 240,
+        category: Foodcategory.dessert,
+        availableAddOne: [
+          Addone(name: "Medium", price: 270),
+          Addone(name: "Large", price: 300),
+        ]),
+
+    Food(
+        name: "Maffin ",
+        description: "Coclate  and cream",
+        imagepath: "lib/images/dessert/Maffin.png",
+        price: 160,
+        category: Foodcategory.dessert,
+        availableAddOne: [
+          Addone(name: "Large", price: 180),
+        ]),
+    Food(
+        name: "Pastry Cake",
+        description: "Coclate ,vanila  with cream",
+        imagepath: "lib/images/dessert/pastycake.png",
+        price: 170,
+        category: Foodcategory.dessert,
+        availableAddOne: [
+          Addone(name: "Medium", price: 200),
+          Addone(name: "Large", price: 230),
+        ]),
+    Food(
+        name: "Zoomba",
+        description: "Coclate, Icecram mixed with ice and cream",
+        imagepath: "lib/images/dessert/Zoomba.png",
+        price: 470,
+        category: Foodcategory.dessert,
+        availableAddOne: [
+          Addone(name: "Medium", price: 480),
+          Addone(name: "Large", price: 500),
+        ]),
   ];
 }
