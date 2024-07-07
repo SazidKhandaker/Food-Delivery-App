@@ -213,5 +213,58 @@ class Resturant {
           Addone(name: "Medium", price: 480),
           Addone(name: "Large", price: 500),
         ]),
+    //Slider
+    Food(
+        name: "French Fries",
+        description: "potato with mustared oil ",
+        imagepath: "lib/images/slider/frenchfries.png",
+        price: 110,
+        category: Foodcategory.sider,
+        availableAddOne: [
+          Addone(name: "Medium", price: 130),
+          Addone(name: "large", price: 170),
+        ]),
+    Food(
+        name: "Ramen",
+        description:
+            "a soy-based broth flavored with soy sauce, mirin, pork or chicken stock, and rice vinegar. ",
+        imagepath: "lib/images/slider/ramen.png",
+        price: 270,
+        category: Foodcategory.sider,
+        availableAddOne: [
+          Addone(name: "Medium", price: 290),
+          Addone(name: "large", price: 320),
+        ]),
+    Food(
+        name: "Spicy Ramen",
+        description:
+            "a soy-based broth flavored with soy sauce, mirin, pork or chicken stock, and rice vinegar. ",
+        imagepath: "lib/images/slider/specialramen.png",
+        price: 320,
+        category: Foodcategory.sider,
+        availableAddOne: [
+          Addone(name: "Medium", price: 350),
+          Addone(name: "large", price: 380),
+        ]),
+    Food(
+        name: "Thai Soup",
+        description: "Soup thick with chiken and pawrn ",
+        imagepath: "lib/images/slider/specialramen.png",
+        price: 150,
+        category: Foodcategory.sider,
+        availableAddOne: [
+          Addone(name: "Medium", price: 180),
+          Addone(name: "large", price: 220),
+        ]),
+    Food(
+        name: "widges Soup",
+        description: "potato with honey mustared",
+        imagepath: "lib/images/slider/widges.png",
+        price: 150,
+        category: Foodcategory.sider,
+        availableAddOne: [
+          Addone(name: "Medium", price: 180),
+          Addone(name: "large", price: 220),
+        ]),
   ];
 }
