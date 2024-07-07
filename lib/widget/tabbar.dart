@@ -16,8 +16,11 @@ class MyTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TabBar(controller: tabBarcontorller, tabs: _newtabbar()),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0.0),
+      child: Container(
+        child: TabBar(controller: tabBarcontorller, tabs: _newtabbar()),
+      ),
     );
   }
 }

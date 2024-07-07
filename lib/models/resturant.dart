@@ -10,7 +10,7 @@ class Resturant extends ChangeNotifier {
             "the ground chuck, chopped bacon, onion, and Worcestershire sauce.",
         imagepath: "lib/images/burgers/bacon.png",
         price: 350,
-        category: Foodcategory.burgers,
+        category: Foodcategory.burger,
         availableAddOne: [
           Addone(name: "Extra Cheese", price: 30),
           Addone(name: "Extra Bacon", price: 110),
@@ -21,7 +21,7 @@ class Resturant extends ChangeNotifier {
         description: "Chicken burger with French Fries. Combo package",
         imagepath: "lib/images/burgers/Burgerfries.png",
         price: 250,
-        category: Foodcategory.burgers,
+        category: Foodcategory.burger,
         availableAddOne: [
           Addone(name: "Extra Cheese", price: 30),
           Addone(name: "Extra fries", price: 70),
@@ -33,7 +33,7 @@ class Resturant extends ChangeNotifier {
             "Two chiken patties, two slices of American cheese, lettuce, tomato, onions, and spread",
         imagepath: "lib/images/burgers/doubledecker.png",
         price: 410,
-        category: Foodcategory.burgers,
+        category: Foodcategory.burger,
         availableAddOne: [
           Addone(name: "Extra Cheese", price: 30),
           Addone(name: "Extra patty", price: 100),
@@ -45,7 +45,7 @@ class Resturant extends ChangeNotifier {
             "a stack of crispy pickle fries, plus crinkle-cut pickle slices, a creamy dill-infused ranch sauce, and chopped lettuce, all on a toasted brioche bun.",
         imagepath: "lib/images/burgers/pickelchiken.png",
         price: 300,
-        category: Foodcategory.burgers,
+        category: Foodcategory.burger,
         availableAddOne: [
           Addone(name: "Extra Cheese", price: 30),
           Addone(name: "Extra patty", price: 100),
@@ -58,7 +58,7 @@ class Resturant extends ChangeNotifier {
             "usually made with chiken, some breadcrumbs, an egg and seasoning and has to be our favourite grill ingredient along with the sausage",
         imagepath: "lib/images/burgers/Studentburger.png",
         price: 180,
-        category: Foodcategory.burgers,
+        category: Foodcategory.burger,
         availableAddOne: [
           Addone(name: "Extra Cheese", price: 30),
           Addone(name: "Extra patty", price: 100),

@@ -15,7 +15,7 @@ class Food {
       required this.availableAddOne});
 }
 
-enum Foodcategory { burgers, dessert, drinks, salad, sider }
+enum Foodcategory { burger, dessert, drinks, salad, sider }
 
 class Addone {
   final String name;
