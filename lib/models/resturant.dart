@@ -64,5 +64,7 @@ class Resturant {
           Addone(name: "Extra egg", price: 40),
           Addone(name: "Extra bbq sauce", price: 25),
         ]),
+
+    //Salads
   ];
 }
