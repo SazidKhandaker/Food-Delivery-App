@@ -3,6 +3,7 @@ import 'package:food_delivery_app/homepageitem/description.dart';
 import 'package:food_delivery_app/location/manuallocation.dart';
 import 'package:food_delivery_app/models/food.dart';
 import 'package:food_delivery_app/models/resturant.dart';
+import 'package:food_delivery_app/widget/foodtitle.dart';
 import 'package:food_delivery_app/widget/mydrawer.dart';
 import 'package:food_delivery_app/widget/sliverappbar.dart';
 import 'package:food_delivery_app/widget/tabbar.dart';
@@ -48,9 +49,8 @@ class _HomePageState extends State<HomePage>
       return ListView.builder(
           itemCount: catagoryMenu.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text("${catagoryMenu[index].name}"),
-            );
+            final food = catagoryMenu[index];
+            return MyFoodTitle(food: food, ontap: () {});
           });
     }).toList();
   }
