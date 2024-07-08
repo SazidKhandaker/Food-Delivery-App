@@ -98,7 +98,7 @@ class Resturant extends ChangeNotifier {
     Food(
         name: "Healthy Salad",
         description: "prepared with tomato egg  and salad,",
-        imagepath: "lib/images/salad/healthysalad.png",
+        imagepath: "lib/images/salad/healtysalad.png",
         price: 220,
         category: Foodcategory.salad,
         availableAddOne: [Addone(name: "Large", price: 280)]),

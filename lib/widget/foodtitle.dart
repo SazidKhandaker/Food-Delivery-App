@@ -8,22 +8,62 @@ class MyFoodTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-            child: Column(
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: GestureDetector(
+        onTap: ontap,
+        child: Column(
           children: [
-            Text("${food.name}"),
-            Text("${food.price}"),
-            Text("${food.description}")
+            Row(
+              children: [
+                Expanded(
+                    child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "${food.name}",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "${food.price} BDT",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Theme.of(context).colorScheme.inversePrimary),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "${food.description}",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Theme.of(context).colorScheme.inversePrimary),
+                    ),
+                  ],
+                )),
+                SizedBox(
+                  width: 15,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(6)),
+                  child: Image.asset(
+                    food.imagepath,
+                    height: 140,
+                    width: 140,
+                  ),
+                ),
+              ],
+            ),
+            Divider(
+              color: Theme.of(context).colorScheme.tertiary,
+              endIndent: 25,
+              indent: 25,
+            ),
           ],
-        )),
-        Image.asset(
-          food.imagepath,
-          height: 120,
-          width: 120,
         ),
-      ],
+      ),
     );
   }
 }
