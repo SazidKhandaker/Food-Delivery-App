@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/homepageitem/foodditels.dart';
 import 'package:food_delivery_app/models/food.dart';
 
 class MyFoodTitle extends StatelessWidget {
@@ -11,7 +12,15 @@ class MyFoodTitle extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: GestureDetector(
-        onTap: ontap,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => FoodPageDitels(
+                      food: food,
+                    )),
+          );
+        },
         child: Column(
           children: [
             Row(
