@@ -17,25 +17,34 @@ class _FoodPageDitelsState extends State<FoodPageDitels> {
       body: Column(
         children: [
           Image.asset("${widget.food.imagepath}"),
-          Text("${widget.food.name}"),
-          SizedBox(
-            height: 10,
-          ),
-          Text("${widget.food.description}"),
-          SizedBox(
-            height: 10,
-          ),
-          ListView.builder(
-            itemCount: widget.food.availableAddOne.length,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              Addone addone = widget.food.availableAddOne[index];
-              return CheckboxListTile(
-                  title: Text("${addone.name}"),
-                  value: false,
-                  onChanged: (value) {});
-            },
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("${widget.food.name}"),
+                SizedBox(
+                  height: 10,
+                ),
+                Text("${widget.food.description}"),
+                SizedBox(
+                  height: 10,
+                ),
+                ListView.builder(
+                  itemCount: widget.food.availableAddOne.length,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    Addone addone = widget.food.availableAddOne[index];
+                    return CheckboxListTile(
+                        title: Text("${addone.name}"),
+                        subtitle: Text("${addone.price}"),
+                        value: false,
+                        onChanged: (value) {});
+                  },
+                )
+              ],
+            ),
           )
         ],
       ),
