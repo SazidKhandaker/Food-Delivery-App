@@ -21,10 +21,22 @@ class _FoodPageDitelsState extends State<FoodPageDitels> {
           SizedBox(
             height: 10,
           ),
-          Text("${widget.food.description}}"),
+          Text("${widget.food.description}"),
           SizedBox(
             height: 10,
           ),
+          ListView.builder(
+            itemCount: widget.food.availableAddOne.length,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              Addone addone = widget.food.availableAddOne[index];
+              return CheckboxListTile(
+                  title: Text("${addone.name}"),
+                  value: false,
+                  onChanged: (value) {});
+            },
+          )
         ],
       ),
     );
