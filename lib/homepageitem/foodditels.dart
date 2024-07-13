@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/food.dart';
+import 'package:food_delivery_app/widget/mybutton.dart';
 
 class FoodPageDitels extends StatefulWidget {
   final Food food;
+  final Map<Addone, bool> selectAvaiableAddons = {};
 
-  FoodPageDitels({required this.food});
+  FoodPageDitels({required this.food}) {
+    for (Addone addone in food.availableAddOne) {
+      selectAvaiableAddons[addone] = false;
+    }
+  }
 
   @override
   State<FoodPageDitels> createState() => _FoodPageDitelsState();
@@ -34,7 +40,7 @@ class _FoodPageDitelsState extends State<FoodPageDitels> {
                     height: 10,
                   ),
                   Text(
-                    "${widget.food.price}",
+                    "${widget.food.price} Taka",
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -48,6 +54,12 @@ class _FoodPageDitelsState extends State<FoodPageDitels> {
                     style: TextStyle(
                         fontSize: 16,
                         color: Theme.of(context).colorScheme.inversePrimary),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Divider(
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                   SizedBox(
                     height: 10,
@@ -77,22 +89,27 @@ class _FoodPageDitelsState extends State<FoodPageDitels> {
                         return CheckboxListTile(
                             title: Text("${addone.name}"),
                             subtitle: Text(
-                              "${addone.price}",
+                              "${addone.price} Taka",
                               style: TextStyle(
                                   color: Theme.of(context)
                                       .colorScheme
                                       .inversePrimary),
                             ),
-                            value: false,
-                            onChanged: (value) {});
+                            value: widget.selectAvaiableAddons[addone],
+                            onChanged: (bool? value) {
+                              setState(() {
+                                widget.selectAvaiableAddons[addone] = value!;
+                              });
+                            });
                       },
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
                 ],
               ),
+            ),
+            myButton(ontap: () {}, buttonname: "Add To Cart"),
+            SizedBox(
+              height: 25,
             )
           ],
         ),
