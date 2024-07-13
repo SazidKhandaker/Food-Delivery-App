@@ -40,13 +40,13 @@ class MyDescription extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "99 BDT",
+                    "DeliveryTime",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.inversePrimary),
                   ),
                   Text(
-                    "Delivery Fee",
+                    "30-40 min",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.inversePrimary),
