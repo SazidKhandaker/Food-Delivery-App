@@ -22,11 +22,42 @@ class _FoodPageDitelsState extends State<FoodPageDitels> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("${widget.food.name}"),
+                Text(
+                  "${widget.food.name}",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("${widget.food.description}"),
+                Text(
+                  "${widget.food.price}",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.inversePrimary),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "${widget.food.description}",
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Theme.of(context).colorScheme.inversePrimary),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Add-one",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.inversePrimary),
+                ),
                 SizedBox(
                   height: 10,
                 ),
