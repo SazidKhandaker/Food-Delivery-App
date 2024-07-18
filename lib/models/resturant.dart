@@ -280,5 +280,16 @@ class Resturant extends ChangeNotifier {
 
       return isFoodITemSame && isSameAddone;
     });
+    if (cartitem != null) {
+      cartitem.quantity++;
+    } else {
+      _cart.add(
+        CartItem(
+          food: food,
+          selectedavaibleaddone: selectedavaiableaddone,
+        ),
+      );
+    }
+    notifyListeners();
   }
 }
