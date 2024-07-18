@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/homepageitem/description.dart';
 import 'package:food_delivery_app/location/manuallocation.dart';
